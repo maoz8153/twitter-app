@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friendstwitter</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+
+  <div class="logger">
+    <% if signed_in? %>
+        <%= current_user.username %>
+        <%= link_to 'Sign out' , session_path, method: :delete %>
+    <% else %>
+        <%= link_to 'Sign in', new_session_path %>
+        <%= link_to 'Sign out', new_user_path %>
+    <% end %>
+  </div>
+
+  <div class="user-list">
+    <%= link_to "Users list",  users_path  %>
+  </div>
+
+    <% if alert %>
+    <p><%= alert %></p>
+  <% end %>
+
+  <% if notice %>
+    <p><%= notice %></p>
+  <% end %>
+
+</header>
+
+<div id="content">
+  <div class="wrapper">
+    <div class="search">
+      <%= form_for(:search, url: search_path, method: :get) do |f|  %>
+        <%= f.text_field  :term %>
+        <%= f.submit "Search"  %>
+        <% end %>
+    </div>
+<%= yield %>
+  </div>
+</div>
+
+</body>
+</html>

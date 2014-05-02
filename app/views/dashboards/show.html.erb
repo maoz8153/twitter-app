@@ -1,0 +1,11 @@
+<%= form_for @dashboard.new_text_twitt do |f| %>
+  <%= f.text_field :body, placeholder: 'twitt content here'  %>
+  <%= f.submit 'twitt!' %>
+<% end %>
+
+<%= form_for @dashboard.new_photo_twitt do |f| %>
+  <%= f.file_field :image  %>
+  <%= f.submit 'twitt!' %>
+<% end %>
+
+<%= render @dashboard.timeline %>

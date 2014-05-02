@@ -1,0 +1,9 @@
+<%= div_for twitt do %>
+  <%= gravatar twitt.user %>
+  <%=link_to twitt.user.username, twitt.user %>
+  twitted:
+  <div>
+    <%= render twitt.content %>
+  </div>
+  <%= link_to time_ago_in_words(twitt.created_at), twitt  %>
+<% end %>

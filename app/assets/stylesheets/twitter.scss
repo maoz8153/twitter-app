@@ -1,0 +1,39 @@
+.twitt {
+  padding: 10px;
+  border-top: 1px solid #EEE
+}
+* {
+  font-family: sans-serif;
+  color: #3f3e3d;
+}
+input {
+  width: 236px;
+  height: 38px;
+  border: 1px solid #d2d2d2;
+  padding: 0 10px;
+  outline: none;
+  font-size: 17px;
+}
+input:focus {
+  background: #FFFDF2;
+}
+input[type="submit"] {
+  height: 36px;
+  border: 1px solid #7BC574;
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+  background: #8cd585;
+}
+a {
+  text-decoration: none;
+  color: #58b84e;
+  text-shadow: #58b84e 0 0 1px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
